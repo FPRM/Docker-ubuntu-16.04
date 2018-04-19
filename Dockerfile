@@ -11,7 +11,14 @@ RUN apt-get upgrade -y
 
 
 # compilers and basic tools
-RUN apt-get install -y  build-essential make gcc git-core curl wget nano apt-transport-https
+RUN apt-get install -y  build-essential 
+RUN apt-get install -y make 
+RUN apt-get install -y gcc 
+RUN apt-get install -y git-core 
+RUN apt-get install -y curl 
+RUN apt-get install -y wget 
+RUN apt-get install -y nano 
+RUN apt-get install -y apt-transport-https
 
 
 
