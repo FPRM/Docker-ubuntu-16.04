@@ -11,7 +11,7 @@ RUN apt-get upgrade -y
 
 
 # compilers and basic tools
-RUN apt-get install -y gfortran build-essential make gcc build-essential git-core curl wget vim-tiny nano
+RUN apt-get install -y  build-essential make gcc build-essential git-core curl wget vim-tiny nano apt-transport-https
 
 
 
