@@ -11,7 +11,7 @@ RUN apt-get upgrade -y
 
 
 # compilers and basic tools
-RUN apt-get install -y  build-essential make gcc build-essential git-core curl wget vim-tiny nano apt-transport-https
+RUN apt-get install -y  build-essential make gcc git-core curl wget nano apt-transport-https
 
 
 
