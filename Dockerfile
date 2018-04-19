@@ -4,7 +4,7 @@ MAINTAINER Floprm "https://github.com/FPRM"
 RUN apt-get update
 RUN apt-get install -y build-essential
 RUN apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-RUN -y install wget
+RUN apt-get install -y wget
 RUN cd ~
 RUN mkdir python_install
 RUN cd python_install
