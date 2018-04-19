@@ -3,9 +3,27 @@ MAINTAINER Floprm "https://github.com/FPRM"
 
 
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse" > /etc/apt/sources.list
-RUN echo "deb-src http://archive.canonical.com/ubuntu xenial partner" > /etc/apt/sources.list
+
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial main restricted" > /etc/apt/sources.list
+RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security main restricted" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted" > /etc/apt/sources.list
+RUN echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted" > /etc/apt/sources.list
+RUN echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted" > /etc/apt/sources.list
+RUN echo "deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-updates universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://security.ubuntu.com/ubuntu xenial-security universe multiverse" > /etc/apt/sources.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" > /etc/apt/sources.list
+
+
+
+
+
+
 RUN apt-get update
 RUN apt-get upgrade -y
 
