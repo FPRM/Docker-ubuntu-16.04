@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
         wget \
         nano \
         openssh-server \
+        python2.7 \
+        python-pip \
 && rm -rf /var/lib/apt/lists/*
 
 
