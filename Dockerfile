@@ -11,7 +11,7 @@ RUN apt-get upgrade -y
 
 
 # compilers and basic tools
-RUN apt-get install -y  build-essential 
+#RUN apt-get install -y  build-essential 
 RUN apt-get install -y make 
 RUN apt-get install -y gcc 
 RUN apt-get install -y git-core 
