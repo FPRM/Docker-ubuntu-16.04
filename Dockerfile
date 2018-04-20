@@ -15,10 +15,27 @@ RUN apt-get update && apt-get install -y \
         nano \
         openssh-server \
         python2.7 \
-        python-pip 
+        python-pip \
+        gawk \
+        make \
+        git curl \
+        cmake \
+        psmisc \
+        g++ \
+        python-matplotlib \
+        python-serial \
+        python-wxgtk3.0 \
+        python-scipy \
+        python-opencv \
+        python-numpy \
+        python-pyparsing \
+        ccache realpath \
+        libopencv-dev  \
+        lsb-release 
 
 
-
+RUN export LC_ALL=C
+RUN source .bashrc 
 # pip
 #RUN wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py; python get-pip.py; rm -f /get-pip.py
 
