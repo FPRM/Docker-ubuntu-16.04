@@ -32,8 +32,8 @@ RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/s
 # SSH login fix. Otherwise user is kicked off after login
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 # add keep alive in ssh_config every 30 seconds with max trial of 5 attempt
-RUN bash -c 'ClientAliveInterval 30' >> /etc/ssh/sshd_config
-RUN bash -c 'ServerAliveCountMax 5' >> /etc/ssh/sshd_config
+RUN echo 'ClientAliveInterval 30' >> /etc/ssh/sshd_config
+RUN echo 'ServerAliveCountMax 5' >> /etc/ssh/sshd_config
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
