@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN export LC_ALL=C
-RUN source .bashrc 
+RUN source ~/.bashrc
 # pip
 #RUN wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py; python get-pip.py; rm -f /get-pip.py
 
