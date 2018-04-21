@@ -5,19 +5,13 @@ MAINTAINER Floprm "https://github.com/FPRM"
 
 # compilers and basic tools
 RUN apt-get update && apt-get install -y \
-        build-essential  \
-        apt-utils \
-        make \
-        gcc \
-        git-core \
+        
         curl \
         wget \
         nano \
         openssh-server \
         python2.7 \
         python-pip \
-        gawk \
-        make \
         git curl \
         cmake \
         psmisc \
@@ -31,7 +25,25 @@ RUN apt-get update && apt-get install -y \
         python-pyparsing \
         ccache realpath \
         libopencv-dev  \
-        lsb-release 
+        lsb-release  \
+        python-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        antiword \
+        unrtf \
+        poppler-utils \
+        pstotext \
+        tesseract-ocr \
+        flac \
+        ffmpeg \
+        lame \
+        libmad0 \
+        libsox-fmt-mp3 \
+        sox \
+        libjpeg-dev \
+        swig
+
+
 
 
 RUN export LC_ALL=C
@@ -44,6 +56,7 @@ RUN /bin/bash -c "source ~/.bashrc"
 
 RUN mkdir /var/run/sshd
 
+RUN pip install textract
 RUN echo 'root:medica' |chpasswd
 
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
