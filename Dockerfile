@@ -55,7 +55,7 @@ RUN /bin/bash -c "source ~/.bashrc"
 #install ssh
 
 RUN mkdir /var/run/sshd
-
+RUN pip install --upgrade pip
 RUN pip install textract
 RUN echo 'root:medica' |chpasswd
 
