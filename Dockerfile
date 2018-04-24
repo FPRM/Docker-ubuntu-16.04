@@ -34,8 +34,6 @@ RUN apt-get update && apt-get install -y \
         lsb-release 
 
 
-RUN export LC_ALL=C
-RUN /bin/bash -c "source ~/.bashrc"
 
 # pip
 #RUN wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py; python get-pip.py; rm -f /get-pip.py
@@ -54,4 +52,8 @@ RUN echo 'ClientAliveInterval 30' >> /etc/ssh/sshd_config
 RUN echo 'ServerAliveCountMax 5' >> /etc/ssh/sshd_config
 
 EXPOSE 22
+EXPOSE 11345
+EXPOSE 11311
+EXPOSE 80
+EXPOSE 443
 CMD ["/usr/sbin/sshd", "-D"]
