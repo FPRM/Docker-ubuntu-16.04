@@ -14,3 +14,6 @@ RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 RUN sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8/' /etc/locale.gen && \
     locale-gen
+
+RUN echo $date +”%Z %z”
+RUN echo /etc/locale.conf
